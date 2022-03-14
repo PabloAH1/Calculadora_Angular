@@ -1,0 +1,19 @@
+<h3>CALCULADORA</h3>
+    <hr>
+
+      <input type="text" name="dato1" placeholder="dato1" [(ngModel)]="dato1">
+      <input type="text" name="dato2" placeholder="dato2" [(ngModel)]="dato2">
+      <label for="resultado">Resultado</label>
+
+      <app-calcular #calculo></app-calcular>
+      <button (click)="calculo.sumar()">Sumar</button>
+      <button (click)="calculo.restar()">Restar</button>
+      <button (click)="calculo.multiplicar()">Multiplicar</button>
+      <button (click)="calculo.dividir()">Dividir</button>
+      <button (click)="calculo.limpiar()">Limpiar</button>
+
+
+<app-calcular [dato1]="dato1" [dato2]="dato2" ></app-calcular>
+
+<app-mostrar-resultado></app-mostrar-resultado>
+
